@@ -1,5 +1,22 @@
-.env
+# Entorno virtual
 venv/
-__pycache__/
 *.pyc
-    
+__pycache__/
+*.egg-info/
+
+# Variables de entorno
+.env
+.env.local
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Datos locales
+data/
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
