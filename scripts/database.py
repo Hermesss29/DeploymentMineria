@@ -17,13 +17,12 @@ try:
     DB_PASSWORD = st.secrets["DB_PASSWORD"].strip()
     DB_NAME     = st.secrets["DB_NAME"].strip()
 except:
-    DB_HOST     = os.getenv('DB_HOST', 'db.ezchuppodybddecvzxht.supabase.co').strip()
-    DB_PORT     = int(os.getenv('DB_PORT', '5432'))
-    DB_USER     = os.getenv('DB_USER', 'postgres').strip()
+    DB_HOST     = os.getenv('DB_HOST', 'aws-1-sa-east-1.pooler.supabase.com').strip()
+    DB_PORT     = int(os.getenv('DB_PORT', '6543'))
+    DB_USER     = os.getenv('DB_USER', 'postgres.ezchuppodybddecvzxht').strip()
     DB_PASSWORD = os.getenv('DB_PASSWORD', 'Mars2905@123').strip()
     DB_NAME     = os.getenv('DB_NAME', 'postgres').strip()
 
-# URL.create maneja caracteres especiales como @ en la contraseña
 DATABASE_URL = URL.create(
     drivername = "postgresql+psycopg2",
     username   = DB_USER,
